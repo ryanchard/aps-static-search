@@ -120,7 +120,7 @@ export default function Index() {
                   return (
                     <LinkBox
                       as={NextLink}
-                      href={`/results/${gmeta.subject}`}
+                      href={`/results/${entry.content.dc.titles[0].title}`}
                       key={i}
                     >
                       <Card size="sm" w="full">
