@@ -30,8 +30,15 @@ type SearchResponse = {
     subject: string;
     entries: {
       content: {
-        title: string;
-        summary: string;
+        dc: {
+          titles: {
+            title: string;
+          }[];
+          types: {
+            resourceType: string;
+            resourceTypeGeneral: string;
+          };
+        };
       };
     }[];
   }[];
