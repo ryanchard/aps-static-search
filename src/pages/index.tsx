@@ -113,7 +113,7 @@ export default function Index() {
                   return (
                     <LinkBox
                       as={NextLink}
-                      href={`/results/${res.subject}`}
+                      href={`/results/${entry.subject}`}
                       key={i}
                     >
                       <Card size="sm" w="full">
