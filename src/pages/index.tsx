@@ -108,23 +108,23 @@ export default function Index() {
             )}
             <VStack py={2} spacing={5} align="stretch">
               {results &&
-                results.gmeta.map((gmeta, i) => {
-                  const entry = gmeta.entries[0];
+                results.entries.map((res, i) => {
+                  const entry = res[0];
                   return (
                     <LinkBox
                       as={NextLink}
-                      href={`/results/${gmeta.subject}`}
+                      href={`/results/${res.subject}`}
                       key={i}
                     >
                       <Card size="sm" w="full">
                         <CardHeader>
                           <Heading size="md" color="brand">
-                            {entry.content.title}
+                            {entry.content.dc.titles.title}
                           </Heading>
                         </CardHeader>
                         <CardBody>
                           <Text noOfLines={[3, 5, 10]}>
-                            {entry.content.summary}
+                            {entry.content.dc.types.resourceType}
                           </Text>
                         </CardBody>
                       </Card>
