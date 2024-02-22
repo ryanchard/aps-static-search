@@ -108,8 +108,8 @@ export default function Index() {
             )}
             <VStack py={2} spacing={5} align="stretch">
               {results &&
-                results.entries.map((res, i) => {
-                  const entry = res[0];
+                results.gmeta.map((gmeta, i) => {
+                  const entry = gmeta.entries[0];
                   return (
                     <LinkBox
                       as={NextLink}
