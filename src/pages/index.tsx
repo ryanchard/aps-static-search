@@ -126,7 +126,7 @@ export default function Index() {
                       <Card size="sm" w="full">
                         <CardHeader>
                           <Heading size="md" color="brand">
-                            {entry.content.dc.titles.title}
+                            {entry.content.dc.titles[0].title}
                           </Heading>
                         </CardHeader>
                         <CardBody>
